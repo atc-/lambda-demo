@@ -12,7 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jdk8.home>SET YOUR JDK 8 HOME HERE PLEASE!</jdk8.home>
+		<jdk8.home>/home/atc/apps/dev/jdk1.8.0</jdk8.home>
 	</properties>
 
 	<dependencies>
