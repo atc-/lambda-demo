@@ -1,6 +1,9 @@
 package jdk8.lambda.demo.collections;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Filter {
 
@@ -12,8 +15,28 @@ public class Filter {
         }
     }
 
-    public Iterator<Integer> odds() {
-        // This is merely a lazy view of the underlying collection
-        return ALL_INTS_TO_1MILL.stream().filter(i -> i % 2 != 0).iterator();
+    /**
+     * Return all odd integers within 0 <= x <= 1 million
+     * @return a lazy Stream view of ALL_INTS_TO_1MILL
+     */
+    public Stream<Integer> odds() {
+        return ALL_INTS_TO_1MILL.stream().filter(i -> i % 2 != 0);
+    }
+
+    /**
+     * Return all even integers within 0 <= x <= 1 million
+     * @return a lazy Stream view of ALL_INTS_TO_1MILL
+     */
+    public Stream<Integer> evens() {
+        return ALL_INTS_TO_1MILL.stream().filter(i -> i % 2 == 0);
+    }
+
+    /**
+     * Demonstrates functions as a type
+     * @param func the predicate function for filter
+     * @return a lazy Stream view of ALL_INTS_TO_1MILL
+     */
+    public Stream<Integer> filter(final Predicate func) {
+        return ALL_INTS_TO_1MILL.stream().filter(func);
     }
 }
