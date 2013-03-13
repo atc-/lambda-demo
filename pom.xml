@@ -12,20 +12,19 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jdk8.home>/home/atc/apps/dev/jdk1.8.0</jdk8.home>
+		<jdk8.home>JDK 8 PATH HERE</jdk8.home>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
+			<version>4.11</version>
 		</dependency>
 	</dependencies>
 
 	<build>
-	 <plugins>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -37,25 +36,25 @@
 					<compilerVersion>1.8</compilerVersion>
 				</configuration>
 			</plugin>
-		 <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-enforcer-plugin</artifactId>
-			<executions>
-			<execution>
-				<id>enforce-versions</id>
-				<goals>
-				<goal>enforce</goal>
-				</goals>
-				<configuration>
-				<rules>
-					<requireJavaVersion>
-					<version>1.8</version>
-					</requireJavaVersion>
-				</rules>
-				</configuration>
-			</execution>
-			</executions>
-		</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<executions>
+				<execution>
+					<id>enforce-versions</id>
+					<goals>
+					<goal>enforce</goal>
+					</goals>
+					<configuration>
+					<rules>
+						<requireJavaVersion>
+						<version>1.8</version>
+						</requireJavaVersion>
+					</rules>
+					</configuration>
+				</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
