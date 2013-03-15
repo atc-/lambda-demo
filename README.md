@@ -19,5 +19,5 @@ Comparisons between sequential and paralleled algorithms for demonstrating the s
 ### Streams
 
 ### Types
-Covering Runnable types, Method references and so-on.
+Covering Runnable types, Function references and so-on. Also includes an example of the Strategy Pattern using Predicate, Function and the new `stream()` API.
 
